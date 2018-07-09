@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>CodePen - Login</title>
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+  <html lang="en-US">
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+
+  </head>
+
+  <body>
+    <body>
+      <main>
+          <h1>Página de Inicio de Sesión</h1>
+      </main>
+  </body>
+
+  <main>
+    <!--Header de la página-->
+    <div class="header">
+        <div class="header-izquierda">
+            <img src="img/logoCenfo.png" alt="Logo U">
+        </div>
+        <h1 class="w3-display-middle">Anculus-Plataforma administrativa de asistentes</h1>
+        
+    </div>
+
+    <div class="container">
+
+      <div id="login">
+
+        <form action="javascript:void(0);" method="get">
+
+          <fieldset class="clearfix">
+
+            <p><span class="fontawesome-user"></span><input type="text" value="Nombre de Usuario" onBlur="if(this.value == '') this.value = 'Nombre de Usuario'" onFocus="if(this.value == 'Nombre de Usuario') this.value = ''" required></p> <!-- JS por el soporte de IE, mejor utilizar placeholder="Nombre de Usuario" -->
+            <p><span class="fontawesome-lock"></span><input type="password"  value="Password" onBlur="if(this.value == '') this.value = 'contraseña'" onFocus="if(this.value == 'contraseña') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Contraseña" -->
+            <p><input type="submit" value="Ingresar"></p>
+
+          </fieldset>
+
+        </form>
+
+        <p> <a href="#">¿Olvidó su contraseña?</a><span class="fontawesome-arrow-right"></span></p>
+
+      </div> <!-- end login -->
+
+    </div>
+
+  </body>
+</html>
+
+</body>
+
+</html>

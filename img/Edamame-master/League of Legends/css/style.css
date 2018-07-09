@@ -1,0 +1,114 @@
+html {
+    font-family: sans-serif;
+}
+
+/* Estilos header */
+header {
+    background-color: #121212;
+    padding: 10px 20px;
+    margin-bottom: 25px; 
+    text-align: center;
+    border-bottom: 2px solid #cc8e35;
+}
+header img {
+    display: inline;
+}
+header nav a {
+    color: #cc8e35;
+    text-decoration: none;
+    margin-right:10%;
+    
+}
+
+header nav a:hover {
+    border-bottom: 1px solid #cc8e35;
+    padding-bottom: 3px;  
+}
+
+/* Fin estilos header */
+
+/* Estilos main */
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body {
+    background-color: #000000;
+}
+main {
+    border-bottom: 1px solid #cc8e35;
+    text-align: center;
+    margin-bottom: 15px;    
+}
+
+main section {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    width: 90%;
+    background-color: #f7f1e3;
+    border: 2px solid #cc8e35;
+}
+
+main section a{
+    color: #257372;
+    text-decoration: none;
+}
+
+main section a:hover {
+    color: #5cb2b1;
+}
+
+main section h2{
+    color: #257372;
+}
+
+main #img_titulo {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 70px;
+    margin-bottom: 25px;
+}
+
+footer {
+    width: 50%;
+    margin-left: 25%;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 10px;
+    color: #94afa9;
+    margin-bottom: 10px;
+}
+
+
+/* Fin estilos main */
+
+/* Clases generales */
+.flow_root{
+    display: flow-root;
+}
+.float_left{
+    float: left;
+}
+.float_right{
+    float: right;
+}
+.container {
+    width: 100%;
+    height: 196px;
+}
+.texto_descripcion {
+    margin-left: 5%;
+    width: 40%;
+}
+.imagen_descripcion{
+    width: 40%;
+    height: 196px;
+}
+
+/*Fin clases generales */

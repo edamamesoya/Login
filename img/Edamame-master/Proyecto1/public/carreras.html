@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carreras</title>
+
+    <!--Páginas de estilo css-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilosGenerales.css">
+    <link rel="stylesheet" href="css/carreras.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+        <!--Header de la página-->
+        <div class="header">
+            <div class="header-izquierda">
+                <img src="img/logoCenfo.png" alt="Logo U">
+            </div>
+            <h1 class="w3-display-middle">Plataforma administrativa de asistentes</h1>
+            <div class="w3-display-right">
+                <img src="" alt="Avatar usuario">
+                <a href="index.html" class="fas fa-sign-out-alt"></a>
+            </div>
+        </div>
+
+        <!--Menú general (arriba)-->
+        <div class="menuGeneral">
+            <a href="index.html">Inicio</a>
+            <a href="">Perfil</a>
+            <a href="">Solicitudes</a>
+            <a href="">Funciones</a>
+            <a href="">Reportes</a>
+            <a href="">Configuración</a>
+        </div>
+
+        <!--Menú de acciones (lateral)-->
+        <div class="tab">
+            <h2>Acciones</h2>
+            <button class="tablinks" onclick="abrirFuncion(event, 'registrarCarrera')" id="defaultOpen">Registrar carrera</button>
+            <button class="tablinks" onclick="abrirFuncion(event, 'buscarCarrera')">Buscar carrera</button>
+            <button class="tablinks" onclick="abrirFuncion(event, 'listarCarrera')">Listar carreras</button>
+            <button class="tablinks" onclick="abrirFuncion(event, 'listarCarrera')">Enlazar cursos</button>
+        </div>
+          
+        <!--Función registrar carreras-->
+        <div id="registrarCarrera" class="tabcontent">
+            <h2>Registrar carreras</h2>
+            <p>Ingrese la información solicitada en el siguiente formulario. 
+                Una vez completado, seleccione el botón "Registrar" para guardar los datos. 
+            </p>
+            <fieldset class="fieldset">
+                    <legend>Registro de carrera</legend>
+                    <div>
+                        <label for="txtCodigo">Código</label>
+                        <input type="text" id="txtCodigo" required>
+                    </div>
+                    <div>
+                        <label for="txtNombre">Nombre</label>
+                        <input type="text" id="txtNombre" required>
+                    </div>
+                    <div>
+                        <label for="txtCreditos">Créditos</label>
+                        <input type="number" id="txtCreditos" min="0" required>
+                    </div>
+                    <div>
+                        <label for="txtFecha">Fecha de creación</label>
+                        <input type="date" id="txtFecha" required>
+                    </div>
+                    <div>
+                        <form>
+                            <label for="divRadios">Estado</label>
+                                <input type="radio" name="estado" id="rdButton" value="Activo" checked> Activo
+                                <input type="radio" name="estado" value="Inactivo"> Inactivo
+                        </form>
+                    </div>
+                    <button type="button" id="btnRegistrar">Registrar</button>
+            </fieldset>
+        </div>
+              
+        <!--Función buscar carreras-->
+        <div id="buscarCarrera" class="tabcontent">
+            <h2>Lista de carreras</h2>
+            <p>Despliegue total de registros para la sección "Carreras".
+                Para búsquedas específicas, ingrese el nombre completo,  parcial, o el código de la carrera en "Filtrar". 
+                Para buscar entre carreras activas o inactivas, selecciónelo desde el menú desplegable junto a "Filtrar".
+            </p>
+            <fieldset class="fieldset">
+                <legend>Buscar:</legend>
+                <form>
+                    <div>
+                        <label for="txtBuscarCodigo">Filtrar:</label>
+                        <input type="text" id="txtBuscarCodigo">
+                    </div>
+                </form>
+
+                <table id="tblBusqueda" class="w3-table w3-striped w3-bordered w3-border w3-hoverable">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Créditos</th>
+                            <th>Fecha de creación</th>
+                            <th>Estado</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </fieldset>
+        </div>
+              
+        <!--Función listar carreras-->
+        <div id="listarCarrera" class="tabcontent">
+            <table id="tblCarreras" class="w3-table w3-striped w3-bordered w3-border w3-hoverable">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Créditos</th>
+                        <th>Fecha de creación</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                </tbody>
+            </table>
+        </div>
+    </main>
+    
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/carreras/servicioCarreras.js"></script>
+    <script src="js/carreras/controladorCarreras.js"></script>
+</body>
+</html>
